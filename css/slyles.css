@@ -5,7 +5,7 @@ html {
 *,
 *::before,
 *::after {
-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 /* Основной цвет текста:#757575 серый */
@@ -93,11 +93,11 @@ img {
 
 /* Site nav */
 nav {
-margin-left: 93px;
+  margin-left: 93px;
 }
 
 .site-nav {
- display: flex;
+  display: flex;
 }
 
 .site-nav .item + .item {
@@ -236,7 +236,7 @@ margin-left: 93px;
 }
 
 .hero-button {
-  display: inline-block;
+  border: none;
   border-radius: 4px;
   padding: 10px 32px;
   min-width: 200px;
@@ -334,7 +334,7 @@ margin-left: 93px;
 }
 
 .product .product-item + .product-item{
-margin-left: 30px;
+  margin-left: 30px;
 }
 
 .product-title,
@@ -385,12 +385,12 @@ margin-left: 30px;
 }
 
 .team-card {
-background-color: var(--primary-white-color);
+  background-color: var(--primary-white-color);
 
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-0px 1px 1px rgba(0, 0, 0, 0.14),
-0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-item {
@@ -449,8 +449,8 @@ border-radius: 0px 0px 4px 4px;
 }
 
 .team-icon {
-fill: var(--clients-svg-color);
-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--clients-svg-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Clients Section */
@@ -491,7 +491,7 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
-fill: currentColor;
+  fill: currentColor;
 }
 
 /* Footer */
@@ -504,7 +504,7 @@ fill: currentColor;
 }
 
 .page-footer .logo { 
- margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .page-footer .logo span {
@@ -540,13 +540,14 @@ fill: currentColor;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Присоединяйтесь */
+/* Join */
 
 .join {
   margin-left: 70px;
 }
 
-.join-caption {
+.join-caption,
+.subscription-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -583,10 +584,55 @@ fill: currentColor;
 }
 
 .join-icon {
-fill: var(--primary-white-color);
+  fill: var(--primary-white-color);
 }
 
-/* Стили для portfolio.html */
+/* Subscription */
+
+.subscription-form {
+  display: flex;
+  margin-left: 93px;
+}
+
+.subscription-title {
+  margin-left: 93px;
+}
+
+.subscription-input {
+  margin-right: 12px;
+  width: 358px;
+  height: 50px;
+  padding: 0 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  letter-spacing: 0.48px;
+  line-height: 1.25;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.subscription-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscription-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 29px;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+
+.subscription-button-icon {
+  fill: var(--primary-white-color);
+  margin-left: 10px;
+}
+
+/* Styles for portfolio.html */
 
 .filter {
   display: flex;
@@ -690,9 +736,9 @@ fill: var(--primary-white-color);
 }
 
 .projects-item {
- width: calc(100%/3 - 30px);
- margin-right: var(--projects-gap);
- margin-bottom: var(--projects-gap); 
+  width: calc(100%/3 - 30px);
+  margin-right: var(--projects-gap);
+  margin-bottom: var(--projects-gap); 
 }
 
 /* .projects-item:nth-child(3n) {
@@ -749,20 +795,191 @@ fill: var(--primary-white-color);
   left: 50%;
   top: 50%;
   
-  min-width: 528px;
+  max-width: 528px;
+  width: 100%;
   min-height: 581px; 
+  padding: 0 40px;
   background-color: var(--primary-white-color);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
   position: absolute;
   top: 8px;
   right: 8px;
-  color: rgb(0, 0, 0);
-  border:rgba(0, 0, 0, 0.10);
+  border:1px solid rgba(0, 0, 0, 0.10);
   border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal-close-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button:hover .modal-close-icon,
+.modal-button:focus .modal-close-icon {
+  fill: var(--accent-color);
+}
+
+.form {
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.modal-title {
+  display: block;
+  color: var(--title-text-color);
+  margin-top: 50px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--primary-text-color);
+  font-size: 12px;
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 40px;
+  cursor: pointer;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:hover,
+.form-input:focus {
+  border: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.modal-input-thumb:hover .modal-icon,
+.modal-input-thumb:focus-within .modal-icon {
+  fill: var(--accent-color);
+}
+
+.modal-input-thumb {
+  position: relative;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+.form-textarea {
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+}
+
+.form-input::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-size: 12px;
+}
+
+.chekbox-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 30px;
+  margin-top: 20px;
+  
+  font-size: 14px;
+  line-height: 1.71 ;
+  letter-spacing: 0.42px;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 3px solid var(--title-text-color);
+  border-radius: 4px;
+  margin-right: 7px;
+}
+
+.checkbox-input {
+  /* appearance: none;
+  position: absolute; */
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-input:checked + .checkbox-icon {
+  background-image: url(../images/check.svg);
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.conditions{
+  color: var(--accent-color);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.42px;
+  padding-left: 3px;
+}
+
+.form-button {
+  display: flex;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 10px 55px;
+  min-width: 200px;
+  margin: 0 auto;
+  
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.96px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: transparent;
+  border-radius: 4px;
+}
+
+.form-button:hover,
+.form-button:focus {
+  background-color: #188CE8;
 }
